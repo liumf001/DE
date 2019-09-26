@@ -1,0 +1,50 @@
+body{
+    background-image:  url(./img/bg1.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%,100%;
+    background-attachment: fixed;
+}
+
+/* 主页面 */
+#main_page{
+    width: 80%;
+    background-color: saddlebrown;
+    height: auto;
+    opacity: 0.8;
+    /* position: absolute; */
+    margin:0 auto;
+}
+
+/* 列表项 */
+.list_item{
+    text-align: left;
+    font-size: 25px;
+    border-bottom: 1px solid #d17812;
+}
+
+
+ul{
+    /*去掉列表项前的小黑点*/
+    list-style: none;
+}
+
+/* 文件和文件夹的小图表格式 */
+.icon{
+    width: 18px;
+    height: 18px;
+}
+
+.add_img{
+    width: 50px;
+    opacity: 0.9;
+    position: absolute;
+    top: 40%;
+    left: 3%;
+}
+.add_img1{
+    width: 50px;
+    opacity: 0.9;
+    position: absolute;
+    top: 50%;
+    left: 3%;
+}
