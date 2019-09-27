@@ -37,7 +37,7 @@ if ($conn->query($sql1) === TRUE) {
     echo "文件插入成功";
     // header("location:index.php?targetID=".$thisID);
 } else {
-    echo "Error: " . $sql1 . "<br>" . $conn->error;
+    exit("Error: " . $sql1 . "<br>" . $conn->error);
 }
 
 $sql2="select fID from Fl where fName='".$_FILES["file"]["name"]."'";
@@ -46,6 +46,9 @@ if($res2->num_rows>0){
     while($row2=$res2->fetch_assoc()){
         $path="./DOC/file_".$row2['fID'];
         mkdir($path,0777);
+        if(!file_exists($path)){
+            exit("file does not exist");
+        }
         move_uploaded_file($_FILES["file"]["tmp_name"],
             $path."/" . $_FILES["file"]["name"]);//把upload改成id
             header("location:index.php?targetID=".$thisID);
