@@ -9,7 +9,7 @@ if($conn->connect_error){
 }
 
 $fatherId=$_GET['fatherId'];
-echo "fatherId: ".$fatherId."\n";
+// echo "fatherId: ".$fatherId."\n";
 ?>
 <html>
     <head>

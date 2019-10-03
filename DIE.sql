@@ -4,14 +4,14 @@ USE DIE;
 
 CREATE TABLE Dir(
     dID INT PRIMARY KEY AUTO_INCREMENT,
-    dName VARCHAR(45) NOT NULL,
+    dName VARCHAR(200) NOT NULL,
     dPassword VARCHAR(45),
     dFatherId INT NOT NULL
 );
 
 CREATE TABLE Fl(
     fID INT PRIMARY KEY AUTO_INCREMENT,
-    fName VARCHAR(45) NOT NULL,
+    fName VARCHAR(200) NOT NULL,
     fDirID INT NOT NULL,
     foreign key(fDirID) references Dir(dID) on delete CASCADE 
 );

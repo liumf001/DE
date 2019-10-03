@@ -33,6 +33,15 @@ ul{
     width: 18px;
     height: 18px;
 }
+/* 删除图标 */
+.icon_d{
+    width: 15px;
+    height: 15px;
+    float: right;
+    position: absolute;
+    opacity: 0.75;
+}
+
 
 .add_img{
     width: 50px;

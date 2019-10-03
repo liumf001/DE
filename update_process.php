@@ -50,8 +50,9 @@ if($res2->num_rows>0){
             exit("file does not exist");
         }
         move_uploaded_file($_FILES["file"]["tmp_name"],
-            $path."/" . $_FILES["file"]["name"]);//把upload改成id
-            header("location:index.php?targetID=".$thisID);
+            $path."/" . $_FILES["file"]["name"]);
+        chmod($path."/" . $_FILES["file"]["name"],0777);
+        header("location:index.php?targetID=".$thisID);
     }
 }
 

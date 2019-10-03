@@ -1,6 +1,6 @@
 <?php
 $thisID=$_GET['fatherId'];
-echo "thisID:".$thisID;
+// echo "thisID:".$thisID;
 if($thisID==0){
     exit("不能在根目录下创建文件，请先创建文件夹");
 }
